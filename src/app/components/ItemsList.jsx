@@ -42,7 +42,7 @@ const ItemsList = ({ list, listTitle }) => {
   console.log(openedSubmenus);
   return (
     <div
-      className="myList flex items-center justify-center cursor-pointer pr-3 font-semibold text-[9px] sm:text-base md:text-lg text-purple-900 w-4/6 h-10 rounded-sm border-2 border-purple-400 relative hover:border-purple-600 duration-300 bg-white"
+      className="myList flex items-center justify-center cursor-pointer pr-3 font-semibold text-[9px] sm:text-sm text-purple-900 w-4/6 h-10 rounded-sm border-2 border-purple-400 relative hover:border-purple-600 duration-300 bg-white"
       onMouseMove={() => handleMouseMove()}
       onMouseLeave={() => handleMouseLeave()}
       onClick={(e) => {

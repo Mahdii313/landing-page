@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { login, register } from "../GlobalRedux/features/userSlice";
 import toast, { Toaster } from "react-hot-toast";
 import { FaUser } from "react-icons/fa";
+import Reference from "./Reference";
 
 const Navbar = () => {
   const logedIn = useSelector((state: any) => state.user.login);
@@ -49,6 +50,9 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li className="block md:hidden">
+            <Reference />
+          </li>
         </ul>
       </div>
       <div className="flex items-center">

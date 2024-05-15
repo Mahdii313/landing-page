@@ -20,7 +20,9 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main>{children}</main>
-          <Reference />
+          <div className="hidden md:block absolute bottom-3 left-5 ">
+            <Reference />
+          </div>
         </Providers>
       </body>
     </html>

@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Reference = () => {
   return (
-    <div
-      title="منبع گیت هاب"
-      className="absolute bottom-3 left-5 cursor-pointer"
-    >
-      <Link href="https://github.com/Mahdii313/landing-page.git">
+    <div title="منبع گیت هاب" className="cursor-pointer">
+      <Link
+        href="https://github.com/Mahdii313/landing-page.git"
+        className="flex justify-center"
+      >
         <FaGithub size={50} />
       </Link>
     </div>
