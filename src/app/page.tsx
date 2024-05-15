@@ -27,7 +27,7 @@ export default function Home() {
           خرید کنید
         </div>
         <div className="p-4 max-w-[400px] lg:max-w-[600px] flex justify-center text-base md:text-xl lg:text-2xl text-slate-700 bg-opacity-50 backdrop-blur-md rounded-md mb-10 selection:bg-pink-200">
-          با ما بدون دردسر،درددست و دردپا سفارش بدهید و درب منزل تحویل بگیرید،
+          با ما بدون دردسر، درددست و دردپا سفارش بدهید و درب منزل تحویل بگیرید،
           بدون واسطه و با قیمت تولیدی.
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 px-5">
