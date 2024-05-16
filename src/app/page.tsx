@@ -19,9 +19,9 @@ export default function Home() {
         <ProductsFilter />
       </div>
       <div className="w-full lg:w-3/5 flex justify-center items-center flex-col gap-2 sm:gap-7">
-        <div className="bgc text-center drop-shadow-xl selection:bg-pink-200 selection:text-slate-100 font-bold text-3xl sm:text-4xl xl:text-5xl xl2:text-7xl bg-gradient-to-b from-purple-900 to-purple-500 inline-block p-10 text-transparent bg-clip-text">
+        <div className="bgc text-center drop-shadow-xl selection:bg-pink-200 selection:text-slate-100 font-bold text-3xl sm:text-4xl xl:text-5xl xl2:text-7xl bg-gradient-to-b from-purple-900 to-purple-500 inline-block p-10 text-transparent">
           با ما{" "}
-          <span className="bgc bg-gradient-to-l from-[#F27121] via-[#E94057] to-[#8A2387] bg-clip-text py-5">
+          <span className="bgc bg-gradient-to-l from-[#F27121] via-[#E94057] to-[#8A2387] py-5">
             بدون واسطه
           </span>{" "}
           خرید کنید

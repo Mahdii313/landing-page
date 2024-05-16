@@ -5,6 +5,7 @@
 body {
   background-image: url("/landing-bg.png");
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .myNav {
