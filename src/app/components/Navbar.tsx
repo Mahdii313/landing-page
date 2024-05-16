@@ -18,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   return (
-    <nav className="container flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none sticky top-0 z-20 bg-purple-300 bg-opacity-60">
+    <nav className="myNav container flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none z-20 bg-purple-300 bg-opacity-60">
       <Toaster />
       {open ? (
         <IoClose
