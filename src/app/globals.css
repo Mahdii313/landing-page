@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url("/landing-bg.png");
-  background-size: cover;
-}
-
 .myNav {
   position: -webkit-sticky;
   position: sticky;
