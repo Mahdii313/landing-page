@@ -18,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   return (
-    <nav className="container flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none">
+    <nav className="container flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none sticky top-0 z-20 bg-purple-300 bg-opacity-60">
       <Toaster />
       {open ? (
         <IoClose
@@ -36,9 +36,9 @@ const Navbar = () => {
       <div
         className={`${
           open ? "flex" : "hidden"
-        } absolute top-0 right-0 h-screen pt-32 pr-7 pl-4 bg-slate-200 bg-opacity-50 backdrop-blur-sm md:hidden z-10`}
+        } top-0 right-0 h-screen pt-32 pr-7 pl-4 bg-slate-200 bg-opacity-50 backdrop-blur-sm md:hidden z-10 absolute`}
       >
-        <ul className="flex flex-col gap-5 sticky">
+        <ul className="flex flex-col gap-5">
           {NavItems.map((item) => (
             <li
               className="border-b-[1px] border-slate-400 pb-2 cursor-pointer mx-5 text-purple-900 hover:text-purple-500 duration-300 font-semibold text-xl flex items-center"
