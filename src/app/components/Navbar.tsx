@@ -38,7 +38,7 @@ const Navbar = () => {
           open ? "flex" : "hidden"
         } absolute top-0 right-0 h-screen pt-32 pr-7 pl-4 bg-slate-200 bg-opacity-50 backdrop-blur-sm md:hidden z-10`}
       >
-        <ul className="flex flex-col gap-5">
+        <ul className="flex flex-col gap-5 sticky">
           {NavItems.map((item) => (
             <li
               className="border-b-[1px] border-slate-400 pb-2 cursor-pointer mx-5 text-purple-900 hover:text-purple-500 duration-300 font-semibold text-xl flex items-center"

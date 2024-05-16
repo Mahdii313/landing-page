@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="min-h-screen">
+      <body className="min-h-screen overflow-hidden">
         <Providers>
           <Navbar />
           <main>{children}</main>
