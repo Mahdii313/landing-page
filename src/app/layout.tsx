@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="min-h-screen">
+      <body className="min-h-screen relative">
         <Providers>
           <Navbar />
           <main>{children}</main>
-          <div className="hidden md:block absolute bottom-3 left-5 ">
+          <div className="hidden md:block absolute bottom-3 left-3">
             <Reference />
           </div>
         </Providers>
