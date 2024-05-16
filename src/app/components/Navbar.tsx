@@ -18,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   return (
-    <nav className="myNav container flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none z-20 bg-purple-300 bg-opacity-60">
+    <nav className="myNav max-w-full md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none z-20 bg-purple-300 bg-opacity-60">
       <Toaster />
       {open ? (
         <IoClose
