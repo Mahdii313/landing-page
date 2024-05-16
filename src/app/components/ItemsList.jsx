@@ -23,7 +23,7 @@ const ItemsList = ({ list, listTitle }) => {
         submenu = item.subList.map((it, index) => (
           <li
             onClick={() => {
-              setSelectedItem(`${item.title}>${it.title}`);
+              setSelectedItem(`${item.title} > ${it.title}`);
               setOpen(!open);
               handleMouseLeave();
             }}
@@ -39,7 +39,6 @@ const ItemsList = ({ list, listTitle }) => {
     return submenu;
   }
 
-  console.log(openedSubmenus);
   return (
     <div
       className="myList flex items-center justify-center cursor-pointer pr-3 font-semibold text-[9px] sm:text-sm text-purple-900 w-4/6 h-10 rounded-sm border-2 border-purple-400 relative hover:border-purple-600 duration-300 bg-white"

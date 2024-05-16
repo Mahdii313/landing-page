@@ -12,3 +12,8 @@ body {
   position: sticky;
   top: 0;
 }
+
+.bgc {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
