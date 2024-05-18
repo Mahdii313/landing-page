@@ -8,24 +8,28 @@ export const NavItems = [
     link: "/",
     id: 1,
     icon: <FaHome />,
+    subMenu: null,
   },
   {
     title: "محصولات",
     link: "/products",
     id: 2,
     icon: <AiFillProduct />,
+    subMenu: [],
   },
   {
     title: "درباره ما",
     link: "/aboutus",
     id: 3,
     icon: <FaInfo />,
+    subMenu: null,
   },
   {
     title: "تماس با ما",
     link: "/contactus",
     id: 4,
     icon: <MdOutlineMailOutline />,
+    subMenu: null,
   },
 ];
 

@@ -5,20 +5,41 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login, register } from "../GlobalRedux/features/userSlice";
 import toast, { Toaster } from "react-hot-toast";
 import { FaUser } from "react-icons/fa";
 import Reference from "./Reference";
+import { FaChevronDown } from "react-icons/fa6";
+import "animate.css";
 
 const Navbar = () => {
   const logedIn = useSelector((state: any) => state.user.login);
   const registered = useSelector((state: any) => state.user.registered);
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const submenu = useRef<HTMLElement>(null);
+
+  function handleOpenSubmenu(item: any) {
+    if (item.title === "محصولات") {
+      if (submenu && submenu.current) {
+        submenu.current.classList.remove("hidden");
+        submenu.current.classList.add("animate__fadeInDown");
+      }
+    }
+  }
+
+  function handleCloseSubmenu(item: any) {
+    if (item.title === "محصولات") {
+      if (submenu && submenu.current) {
+        submenu.current.classList.remove("animate__fadeInDown");
+        submenu.current.classList.add("hidden");
+      }
+    }
+  }
   return (
-    <nav className="myNav max-w-full md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] flex justify-between items-center mx-auto px-2 py-5 rounded-b-md select-none z-20 bg-purple-300 bg-opacity-60">
+    <nav className="myNav max-w-full md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] flex justify-between items-center mx-auto px-2 rounded-b-md select-none z-20 bg-purple-300 bg-opacity-60">
       <Toaster />
       {open ? (
         <IoClose
@@ -87,10 +108,22 @@ const Navbar = () => {
       <ul className="hidden md:flex items-center font-semibold text-xl">
         {NavItems.map((item) => (
           <li
-            className="cursor-pointer mx-5 text-purple-900 hover:text-purple-500 duration-300"
+            className="cursor-pointer py-7 mx-5 text-purple-900 hover:text-purple-500 duration-300"
             key={item.id}
+            onMouseMove={() => handleOpenSubmenu(item)}
+            onMouseLeave={() => handleCloseSubmenu(item)}
           >
-            <Link href={item.link}>{item.title}</Link>
+            <div className="flex gap-2 flex-row-reverse items-center">
+              <Link href={item.link}>{item.title}</Link>
+
+              {item.subMenu && <FaChevronDown size={14} />}
+              {item.subMenu && (
+                <div
+                  ref={submenu as React.RefObject<HTMLDivElement>}
+                  className="animate__animated animate__faster hidden w-96 h-96 bg-slate-50 absolute top-[84px]"
+                ></div>
+              )}
+            </div>
           </li>
         ))}
       </ul>

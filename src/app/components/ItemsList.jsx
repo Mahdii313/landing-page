@@ -86,7 +86,7 @@ const ItemsList = ({ list, listTitle }) => {
                   handleMouseLeave();
                 }
               }}
-              className="pt-2 item w-full bg-white px-4 min-h-10 hover:bg-slate-100 duration-200 justify-center rounded-sm flex-col flex gap-1 items-start"
+              className="pt-2 item w-full bg-white px-4 min-h-10 hover:bg-slate-100 duration-200 justify-center flex-col flex gap-1 items-start"
             >
               <div className="flex items-center cursor-pointer">
                 {item.haveSubList && (

@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: IransansLight;
-}
-
-.myNav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.bgc {
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 @font-face {
   font-family: "IransansBold"; /* Name your font family */
   src: url("/IRANSansXBold.ttf"); /* Locate the .ttf file within your directory*/
@@ -30,4 +15,19 @@ body {
 @font-face {
   font-family: "IransansXBold"; /* Name your font family */
   src: url("/IRANSansXExtraBold.ttf"); /* Locate the .ttf file within your directory*/
+}
+
+body {
+  font-family: IransansLight;
+}
+
+.myNav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.bgc {
+  background-clip: text;
+  -webkit-background-clip: text;
 }

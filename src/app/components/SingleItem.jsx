@@ -20,16 +20,29 @@ const SingleItem = ({ item }) => {
   return (
     <div
       ref={product}
-      className="min-h-96 cursor-pointer hover:scale-105 hover:shadow-2xl p-3 mx-auto flex flex-col justify-start items-center rounded-sm h-full bg-purple-50 w-full"
+      className="group min-h-[450px] overflow-hidden cursor-pointer duration-200 p-3 mx-auto flex flex-col justify-start items-center rounded-sm h-full hover:bg-black w-full"
     >
       <Image
         src={item.thumbnailUrl}
         width={150}
         height={150}
         alt={"thumbnail"}
-        className="mb-3 rounded-3xl"
+        className="group-hover:shadow-[0_0px_70px_15px_rgba(0,0,0,0.3)] duration-75 group-hover:shadow-slate-50 mb-3 rounded-md"
       />
-      <h1 className="text-xl text-center text-purple-950">این یک کالا است.</h1>
+
+      <h1 className="group-hover:text-slate-50 duration-300 text-xl text-center text-purple-950">
+        این یک کالا است.
+      </h1>
+      <p
+        dir="ltr"
+        className="group-hover:text-slate-200 duration-300 text-slate-700 mt-auto text-left"
+      >
+        {`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
+        temporibus laboriosam itaque dignissimos porro, ducimus sint impedit
+        iure pariatur ullam, quos veritatis earum nesciunt consectetur
+        praesentium quod exercitationem. Quisquam, magnam!`.substring(0, 100) +
+          `...`}
+      </p>
     </div>
   );
 };
