@@ -26,7 +26,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/components/ItemsList.jsx"
+    "src/app/components/ItemsList.jsx",
+    "src/app/components/Products.jsx",
+    "src/app/components/SingleItem.jsx"
   ],
   "exclude": ["node_modules"]
 }

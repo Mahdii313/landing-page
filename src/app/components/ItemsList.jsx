@@ -55,7 +55,13 @@ const ItemsList = ({ list, listTitle }) => {
         ref={chevron}
         className="absolute top-[10px] right-2 sm:right-4 duration-300"
       >
-        <FaChevronDown className="text-purple-800" />
+        <FaChevronDown
+          className="text-purple-800"
+          onClick={() => {
+            setOpen(!open);
+            setOpenedSubmenus([]);
+          }}
+        />
       </div>
       {selectedItem || listTitle}
       <ul className="item absolute top-[38px] w-full left-0 max-h-44 overflow-y-scroll z-20">
@@ -80,7 +86,7 @@ const ItemsList = ({ list, listTitle }) => {
                   handleMouseLeave();
                 }
               }}
-              className="item w-full bg-white px-4 min-h-10 hover:bg-slate-100 duration-200 justify-center rounded-sm flex-col flex gap-1 items-start"
+              className="pt-2 item w-full bg-white px-4 min-h-10 hover:bg-slate-100 duration-200 justify-center rounded-sm flex-col flex gap-1 items-start"
             >
               <div className="flex items-center cursor-pointer">
                 {item.haveSubList && (
@@ -88,9 +94,9 @@ const ItemsList = ({ list, listTitle }) => {
                 )}
                 <div className="item mr-3">{item.title}</div>
               </div>
-              <ul className="mr-4 mb-2 w-full">
-                {openedSubmenus && handleSubmenus(item)}
-              </ul>
+              {openedSubmenus && (
+                <ul className="mr-4 mb-2 w-full">{handleSubmenus(item)}</ul>
+              )}
             </li>
           ))}
       </ul>

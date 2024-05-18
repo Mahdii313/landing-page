@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const ProductsFilter = () => {
   return (
-    <div className="shadow-xl shadow-slate-300 rounded-xl py-5 pr-4 pl-6 border bg-purple-500 bg-opacity-15 border-slate-300">
+    <div className="rounded-sm py-5 pr-4 pl-6 bg-purple-500 bg-opacity-55">
       <div className="flex items-center justify-between flex-row-reverse mb-5">
         <div className="mr-5 text-[9px] sm:text-base font-semibold text-purple-900">
           : نوع کالا
