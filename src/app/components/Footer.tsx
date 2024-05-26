@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="w-full text-white grid grid-cols-2 sm:grid-cols-4">
         {FooterItems.map((item, index) => {
           return (
-            <div className="h-40 w-fit mx-auto md:min-h-52">
+            <div key={index} className="h-40 w-fit mx-auto md:min-h-52">
               <h2 className="tex-lg md:text-2xl mb-2 cursor-pointer">
                 {item.title}
               </h2>

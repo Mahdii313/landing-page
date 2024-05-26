@@ -6,6 +6,7 @@ const MegaMenu = ({ menu }: any) => {
       <div className="min-w-32">
         {menu.menu.map((item: any, index: number) => (
           <div
+            key={index}
             className={`cursor-pointer py-2 text-xl px-4 mr-2 hover:bg-slate-300 rounded-xl duration-100 my-1`}
           >
             {item}
