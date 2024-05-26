@@ -8,7 +8,10 @@ const Footer = () => {
         {FooterItems.map((item, index) => {
           return (
             <div key={index} className="h-40 w-fit mx-auto md:min-h-52">
-              <h2 className="tex-lg md:text-2xl mb-2 cursor-pointer">
+              <h2
+                key={index}
+                className="tex-lg md:text-2xl mb-2 cursor-pointer"
+              >
                 {item.title}
               </h2>
               {item.subMenu

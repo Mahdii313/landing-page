@@ -79,16 +79,15 @@ const ProductsSlide = () => {
                 }
               }}
             >
-              {window.innerWidth >= 515 &&
-                openedImage.current &&
+              {openedImage.current &&
                 // @ts-ignore
                 openedImage.current.classList[0] != item.id && (
-                  <h1 className="-rotate-90 font-iranxbold text-slate-50 text-[10px] md:text-[18px] lg:text-3xl xl:text-4xl 2xl:text-5xl">
+                  <h1 className="-rotate-90 font-iranxbold text-slate-50 hidden sm:block text-[10px] md:text-[18px] lg:text-3xl xl:text-4xl 2xl:text-5xl">
                     {item.title}
                   </h1>
                 )}
-              {window.innerWidth >= 515 && !openedImage.current && (
-                <h1 className="-rotate-90 font-iranxbold text-slate-50 text-[10px] md:text-[18px] lg:text-3xl xl:text-4xl 2xl:text-5xl">
+              {!openedImage.current && (
+                <h1 className="-rotate-90 font-iranxbold text-slate-50 hidden sm:block text-[10px] md:text-[18px] lg:text-3xl xl:text-4xl 2xl:text-5xl">
                   {item.title}
                 </h1>
               )}
