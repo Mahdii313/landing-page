@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Providers from "./GlobalRedux/Provider";
 import "./globals.css";
 import Reference from "./components/Reference";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "صفحه فرود",
@@ -20,9 +21,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main>{children}</main>
-          <div className="hidden md:block absolute bottom-3 left-3">
-            <Reference />
-          </div>
+          <Footer />
         </Providers>
       </body>
     </html>

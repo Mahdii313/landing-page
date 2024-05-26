@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "src/app/components/ItemsList.jsx",
     "src/app/components/Products.jsx",
-    "src/app/components/SingleItem.jsx"
+    "src/app/components/SingleItem.jsx",
+    "src/app/GlobalRedux/features/cartSlice.js"
   ],
   "exclude": ["node_modules"]
 }

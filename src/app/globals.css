@@ -17,6 +17,10 @@
   src: url("/IRANSansXExtraBold.ttf"); /* Locate the .ttf file within your directory*/
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: IransansLight;
 }
